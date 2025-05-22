@@ -1,5 +1,3 @@
-// fetchData.js - A simple Fetch API library
-
 /**
  * Fetch data from the given URL with provided options.
  * @param {string} url The URL to fetch data from.

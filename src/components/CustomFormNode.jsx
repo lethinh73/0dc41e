@@ -1,3 +1,4 @@
+// CustomFormNode.jsx
 import {
   Handle,
   Position,
@@ -5,6 +6,7 @@ import {
 import formIcon from "../assets/table-solid.svg";
 
 // Custom Form Node Component
+// No longer needs 'onNodeClick' prop or onClick on its div
 const CustomFormNode = ({ data }) => {
   return (
     <div
@@ -14,6 +16,7 @@ const CustomFormNode = ({ data }) => {
         border: "1px solid",
         borderRadius: 10,
         width: 150,
+        cursor: "pointer", // Keep cursor to indicate it's clickable
       }}
     >
       <Handle type="target" position={Position.Left} />

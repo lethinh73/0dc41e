@@ -1,4 +1,4 @@
-// components/FlowCanvas.jsx
+// components/FlowGraph.jsx
 import { ReactFlow, Background } from "@xyflow/react";
 
 const FlowGraph = ({
@@ -8,8 +8,9 @@ const FlowGraph = ({
   onNodesChange,
   onEdgesChange,
   nodeTypes,
+  onNodeClick, // Receive the onNodeClick prop
 }) => {
-  console.log("forms", forms);
+  console.log("forms", forms); // Still good for debugging, but not the cause of the click issue
 
   return (
   <ReactFlow
@@ -18,6 +19,7 @@ const FlowGraph = ({
     onNodesChange={onNodesChange}
     onEdgesChange={onEdgesChange}
     nodeTypes={nodeTypes}
+    onNodeClick={onNodeClick} // Pass the handler to ReactFlow
     defaultViewport={{ x: 0, y: 0, zoom: 1.5 }}
     minZoom={0.2}
     maxZoom={4}
