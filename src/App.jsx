@@ -7,7 +7,6 @@ import "@xyflow/react/dist/style.css";
 import { useState, useMemo } from "react";
 import PrefillMappingDisplay from "./components/PrefillMappingDisplay";
 import PrefillConfigurationModal from "./components/PrefillConfigurationModal";
-import FormDisplay from "./components/FormDisplay";
 import { getDependentForms } from "./lib/graphUtils";
 
 const App = () => {
@@ -121,7 +120,7 @@ const App = () => {
         alignItems: "flex-start",
       }}
     >
-      <div style={{ flex: 1, height: "100%" }}>
+      <div style={{ height: "100%", width: "calc(100% - 350px)", padding: 5 }}>
         <FlowGraph
           nodes={nodes}
           edges={edges}
@@ -135,9 +134,9 @@ const App = () => {
 
       <div
         style={{
-          flex: 1,
           height: "100%",
-          padding: 20,
+          width: "350px",
+          padding: 5,
           overflowY: "auto",
           backgroundColor: "#f0f0f0",
           borderLeft: "1px solid #ccc",
@@ -145,7 +144,6 @@ const App = () => {
       >
         {selectedForm ? (
           <>
-            <FormDisplay form={selectedForm} />
             <PrefillMappingDisplay
               form={selectedForm}
               onClearPrefill={handleClearPrefill}

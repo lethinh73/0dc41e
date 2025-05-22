@@ -42,7 +42,7 @@ const PrefillMappingDisplay = ({ form, onClearPrefill, onFieldClick }) => {
                   <span style={{ color: "#555", marginRight: 10 }}>
                     Prefilled from:{" "}
                     {mapping.sourceType === "formField"
-                      ? `Form ${mapping.sourceFormId}'s ${mapping.sourceFieldName}`
+                      ? `Form ${mapping.sourceFormId}.${mapping.sourceFieldName}`
                       : `Global Data: ${mapping.sourceName}`}
                   </span>
                 ) : (
@@ -54,7 +54,7 @@ const PrefillMappingDisplay = ({ form, onClearPrefill, onFieldClick }) => {
                       marginRight: 10,
                     }}
                   >
-                    Click to configure
+                    Edit
                   </span>
                 )}
                 {hasPrefill && (
