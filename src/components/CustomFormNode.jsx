@@ -3,7 +3,8 @@ import {
   Handle,
   Position,
 } from "@xyflow/react";
-import formIcon from "../assets/table-solid.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTable } from "@fortawesome/free-solid-svg-icons";
 
 // Custom Form Node Component
 // No longer needs 'onNodeClick' prop or onClick on its div
@@ -21,11 +22,7 @@ const CustomFormNode = ({ data }) => {
     >
       <Handle type="target" position={Position.Left} />
         <div style={{ display: "flex", justifyContent: "start", alignItems: "center", fontFamily: "sans-serif" }}>
-          <img
-            src={formIcon}
-            alt="Form Icon"
-            style={{ width: 30, height: 30, marginRight: 5 }}
-          />
+          <FontAwesomeIcon icon={faTable} style={{ marginRight: 5, fontSize: 2 + "em" }} />
           <div style={{ display: "flex", flexDirection: "column", textAlign: "left", marginLeft: 5 }}>
             <div style={{ fontSize: 0.8 + "em", color: "#888" }}>
               {data.type || "Form"}
